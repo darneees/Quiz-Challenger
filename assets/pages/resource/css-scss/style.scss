@@ -22,14 +22,30 @@
   @include align(center, column, center, 1.5rem);
   width: 100%;
 
+  #hud {
+    @include align(center, row, space-between, 1.5rem);
+    width: 48%;
+
+    .hud-prefix {
+      text-align: center;
+      font-size: 2rem;
+    }
+
+    .hud-main-text {
+      text-align: center;
+      color: $color-40;
+      font-size: 1.5rem;
+    }
+  }
+
   .choice-container {
     @include align(center, row, start, 3rem);
     background-color:$color-40;
     color: $color-10;
-    height: 4.4rem;
+    height: 4rem;
     width: 48%;
     border-radius: .5rem;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     box-shadow: rgba(119, 41, 255, 0.35) 0 5px 20px;
 
     .choice-prefix {
@@ -39,7 +55,7 @@
         @include align (center, row, center, 0);
         background-color: $color-10;
         color: $color-60;
-        font-size: 1.85rem;
+        font-size: 1.4rem;
         height: 100%;
         width: 4rem;
         border-radius: .5rem 0 0 .5rem;
@@ -84,6 +100,19 @@
     width: 100%;
     padding: 0;
 
+    #hud {
+      @include align(center, row, space-between, 0);
+      width: 60%;
+
+      .hud-prefix {
+        font-size: 1.8rem;
+      }
+
+      .hud-main-text {
+        font-size: 1.3rem;
+      }
+    }
+
     .choice-container {
       @include align(center, row, start, 2rem);
       width: 60%;
@@ -111,6 +140,19 @@
     @include align(center, column, center, 1.5rem);
     width: 100%;
     padding: 0;
+
+    #hud {
+      @include align(center, row, space-between, 0);
+      width: 90%;
+
+      .hud-prefix {
+        font-size: 1.8rem;
+      }
+
+      .hud-main-text {
+        font-size: 1.3rem;
+      }
+    }
 
     .choice-container {
       @include align(center, row, start, 2rem);
@@ -141,10 +183,23 @@
     width: 100%;
     padding: 0;
 
-    .choice-container {
-      @include align(center, row, start, 2rem);
+    #hud {
+      @include align(center, row, space-between, 0);
       width: 100%;
-      font-size: 1.2rem;
+
+      .hud-prefix {
+        font-size: 1.8rem;
+      }
+
+      .hud-main-text {
+        font-size: 1.3rem;
+      }
+    }
+
+    .choice-container {
+      @include align(center, row, start, .5rem);
+      width: 100%;
+      font-size: 1rem;
 
       .choice-prefix {
         height: 100%;
@@ -158,6 +213,7 @@
   }
 
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    width: 100%;
   }
 }
