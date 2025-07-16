@@ -1,0 +1,163 @@
+@import 'imports/variables',
+        'imports/functions',
+        'imports/reset';
+
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400..800&display=swap');
+
+* {
+  @include reset();
+  font-family: "Wix Madefor Display", sans-serif;
+}
+
+.container {
+  @include align(start, column, space-between, 0);
+  position: relative;
+  background-color: $color-10;
+  width: 100vw;
+  height: 100vh;
+  padding: 2rem;
+}
+
+#game {
+  @include align(center, column, center, 1.5rem);
+  width: 100%;
+
+  .choice-container {
+    @include align(center, row, start, 3rem);
+    background-color:$color-40;
+    color: $color-10;
+    height: 4.4rem;
+    width: 48%;
+    border-radius: .5rem;
+    font-size: 1.3rem;
+    box-shadow: rgba(119, 41, 255, 0.35) 0 5px 20px;
+
+    .choice-prefix {
+      height: 100%;
+
+      i {
+        @include align (center, row, center, 0);
+        background-color: $color-10;
+        color: $color-60;
+        font-size: 1.85rem;
+        height: 100%;
+        width: 4rem;
+        border-radius: .5rem 0 0 .5rem;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      transform: translateY(-.2rem);
+      transition: transform 150ms;
+    }
+  }
+
+  .correct {
+    background-color: lightgreen;
+  }
+
+  .incorrect {
+    background-color: lightcoral;
+  }
+}
+
+.back-button {
+  @include align (center, row, center, 0);
+  background-color:$color-40;
+  color: $color-10;
+  border: none;
+  outline: none;
+  height: 3.3rem;
+  width: 3.3rem;
+  border-radius: .5rem;
+  box-shadow: rgba(119, 41, 255, 0.35) 0 5px 20px;
+
+  i {
+    font-size: 1.6rem;
+  }
+}
+
+@media(780px<=width<=999px) {
+  #game {
+    @include align(center, column, center, 1.5rem);
+    width: 100%;
+    padding: 0;
+
+    .choice-container {
+      @include align(center, row, start, 2rem);
+      width: 60%;
+      font-size: 1.25rem;
+
+      .choice-prefix {
+        height: 100%;
+
+        i {
+          @include align (center, row, center, 0);
+          font-size: 1.55rem;
+        }
+      }
+    }
+  }
+
+  h2 {
+    font-size: 2rem;
+    width: 60%;
+  }
+}
+
+@media(430px<=width<=779px) {
+  #game {
+    @include align(center, column, center, 1.5rem);
+    width: 100%;
+    padding: 0;
+
+    .choice-container {
+      @include align(center, row, start, 2rem);
+      width: 90%;
+      font-size: 1.2rem;
+
+      .choice-prefix {
+        height: 100%;
+
+        i {
+          @include align (center, row, center, 0);
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    width: 90%;
+  }
+}
+
+
+@media(max-width: 429px) {
+  #game {
+    @include align(center, column, center, 1.5rem);
+    width: 100%;
+    padding: 0;
+
+    .choice-container {
+      @include align(center, row, start, 2rem);
+      width: 100%;
+      font-size: 1.2rem;
+
+      .choice-prefix {
+        height: 100%;
+
+        i {
+          @include align (center, row, center, 0);
+          font-size: 1.35rem;
+        }
+      }
+    }
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}

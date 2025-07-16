@@ -1,0 +1,117 @@
+@import 'imports/functions',
+        'imports/variables',
+        'imports/reset';
+
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400..800&display=swap');
+
+* {
+  @include reset();
+  font-family: "Wix Madefor Display", sans-serif;
+}
+
+body {
+  @include align (center, column, center, 0);
+  background-color: $color-10;
+}
+
+/* UTILITIES */
+
+.container {
+  @include align (center, column, center, 0);
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  max-width: 80rem;
+  margin: 0 auto;
+  z-index: 1;
+
+  & > * {
+    width: 100%;
+  }
+
+  .btn {
+    @include align (center, row, space-between, 0);
+    background-color:$color-40;
+    color: $color-10;
+    height: 4.4rem;
+    width: 20rem;
+    font-size: 1.5rem;
+    padding: 0 0 0 2rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: .5rem;
+    box-shadow: rgba(119, 41, 255, 0.35) 0 5px 20px;
+
+    i {
+      @include align (center, row, center, 0);
+      background-color: $color-10;
+      color: $color-60;
+      font-size: 1.7rem;
+      height: 100%;
+      width: 4rem;
+      border-radius: 0 .5rem .5rem 0;
+    }
+
+    &:hover {
+      transform: translateY(-.2rem);
+      transition: transform 150ms;
+    }
+
+  }
+
+  #container-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    user-select: none;
+
+    & .images:nth-child(1) {
+      position: absolute;
+      top: 6rem;
+      left: 6rem;
+    }
+
+    & .images:nth-child(2) {
+      position: absolute;
+      bottom: 5rem;
+      right: 6rem;
+    }
+
+    & .images:nth-child(3) {
+      position: fixed;
+      background-size: cover;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      filter: blur(5.5rem);
+      opacity: .7;
+
+      animation: move 4s linear infinite;
+    }
+  }
+}
+
+/* SELECTION */
+
+::selection {
+  background-color: $color-40;
+  color: $color-10;
+}
+
+/* ANIMATION */
+
+@keyframes move {
+  0% {
+    transform: translateY(-2rem);
+  }
+
+  50% {
+    transform: translateY(2rem);
+  }
+
+  100% {
+    transform: translateY(-2rem);
+  }
+}

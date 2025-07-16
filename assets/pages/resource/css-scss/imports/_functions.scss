@@ -1,0 +1,13 @@
+@mixin reset() {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin align ($align, $direction, $justify, $gap) {
+  display: flex;
+  align-items: $align;
+  flex-direction: $direction;
+  justify-content: $justify;
+  gap: $gap;
+}

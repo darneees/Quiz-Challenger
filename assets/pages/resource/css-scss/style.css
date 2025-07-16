@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400..800&display=swap");
+h1 {
+  font-size: 4rem;
+  margin: 0 0 2rem 0;
+  font-weight: 800;
+}
+
+h1 span {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+h2 {
+  color: #3D246C;
+  font-size: 2.2rem;
+  font-weight: 700;
+  width: 48%;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.f-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.f-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.j-center {
+  justify-content: center;
+}
+
+.t-center {
+  text-align: center;
+}
+
+.t-start {
+  text-align: start;
+}
+
+.hidden {
+  display: none;
+}
+
+.gap {
+  display: flex;
+  gap: 1.2rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Wix Madefor Display", sans-serif;
+}
+
+.container {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0;
+  position: relative;
+  background-color: #F3F8FF;
+  width: 100vw;
+  height: 100vh;
+  padding: 2rem;
+}
+
+#game {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 100%;
+}
+#game .choice-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: start;
+  gap: 3rem;
+  background-color: #7752FE;
+  color: #F3F8FF;
+  height: 4.4rem;
+  width: 48%;
+  border-radius: 0.5rem;
+  font-size: 1.3rem;
+  box-shadow: rgba(119, 41, 255, 0.35) 0 5px 20px;
+}
+#game .choice-container .choice-prefix {
+  height: 100%;
+}
+#game .choice-container .choice-prefix i {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0;
+  background-color: #F3F8FF;
+  color: #3D246C;
+  font-size: 1.85rem;
+  height: 100%;
+  width: 4rem;
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+#game .choice-container:hover {
+  cursor: pointer;
+  transform: translateY(-0.2rem);
+  transition: transform 150ms;
+}
+#game .correct {
+  background-color: lightgreen;
+}
+#game .incorrect {
+  background-color: lightcoral;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0;
+  background-color: #7752FE;
+  color: #F3F8FF;
+  border: none;
+  outline: none;
+  height: 3.3rem;
+  width: 3.3rem;
+  border-radius: 0.5rem;
+  box-shadow: rgba(119, 41, 255, 0.35) 0 5px 20px;
+}
+.back-button i {
+  font-size: 1.6rem;
+}
+
+@media (780px <= width <= 999px) {
+  #game {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
+    padding: 0;
+  }
+  #game .choice-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: start;
+    gap: 2rem;
+    width: 60%;
+    font-size: 1.25rem;
+  }
+  #game .choice-container .choice-prefix {
+    height: 100%;
+  }
+  #game .choice-container .choice-prefix i {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0;
+    font-size: 1.55rem;
+  }
+  h2 {
+    font-size: 2rem;
+    width: 60%;
+  }
+}
+@media (430px <= width <= 779px) {
+  #game {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
+    padding: 0;
+  }
+  #game .choice-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: start;
+    gap: 2rem;
+    width: 90%;
+    font-size: 1.2rem;
+  }
+  #game .choice-container .choice-prefix {
+    height: 100%;
+  }
+  #game .choice-container .choice-prefix i {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0;
+    font-size: 1.4rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+    width: 90%;
+  }
+}
+@media (max-width: 429px) {
+  #game {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
+    padding: 0;
+  }
+  #game .choice-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: start;
+    gap: 2rem;
+    width: 100%;
+    font-size: 1.2rem;
+  }
+  #game .choice-container .choice-prefix {
+    height: 100%;
+  }
+  #game .choice-container .choice-prefix i {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0;
+    font-size: 1.35rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+}/*# sourceMappingURL=style.css.map */
